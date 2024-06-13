@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33384" started-at="2024-06-13T16:12:34 IST" finished-at="2024-06-13T16:13:07 IST">
+  <suite name="Default suite" duration-ms="53311" started-at="2024-06-13T17:27:44 IST" finished-at="2024-06-13T17:28:37 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33384" started-at="2024-06-13T16:12:34 IST" finished-at="2024-06-13T16:13:07 IST">
+    <test name="Default test" duration-ms="53311" started-at="2024-06-13T17:27:44 IST" finished-at="2024-06-13T17:28:37 IST">
       <class name="GuruProject.BankTestClass">
-        <test-method status="PASS" signature="setup()[pri:0, instance:GuruProject.BankTestClass@4493d195]" name="setup" is-config="true" duration-ms="11566" started-at="2024-06-13T16:12:34 IST" finished-at="2024-06-13T16:12:45 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:GuruProject.BankTestClass@57e1b0c]" name="setup" is-config="true" duration-ms="26063" started-at="2024-06-13T17:27:44 IST" finished-at="2024-06-13T17:28:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test()[pri:0, instance:GuruProject.BankTestClass@4493d195]" name="test" duration-ms="17839" started-at="2024-06-13T16:12:45 IST" finished-at="2024-06-13T16:13:03 IST">
+        <test-method status="PASS" signature="test()[pri:0, instance:GuruProject.BankTestClass@57e1b0c]" name="test" duration-ms="19693" started-at="2024-06-13T17:28:10 IST" finished-at="2024-06-13T17:28:29 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:GuruProject.BankTestClass@4493d195]" name="teardown" is-config="true" duration-ms="3926" started-at="2024-06-13T16:13:03 IST" finished-at="2024-06-13T16:13:07 IST">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:GuruProject.BankTestClass@57e1b0c]" name="teardown" is-config="true" duration-ms="7283" started-at="2024-06-13T17:28:30 IST" finished-at="2024-06-13T17:28:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

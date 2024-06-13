@@ -22,16 +22,20 @@ public class BankTestClass extends BankBaseClass {
 		
 		driver.get(URL);
 		driver.manage().window().maximize();
+		logger.info("URL is invoked");
 		
 		BankPageClass test=new BankPageClass(driver);
 		test.userid(uid);
 		Thread.sleep(3000);
+		logger.info("Userid is entered");
 		test.password(pass);
 		
 		
 		Thread.sleep(3000);
+		logger.info("Password is entered");
 		
 		test.login();
+		logger.info("Loggedi in successfully");
 		
 		
 

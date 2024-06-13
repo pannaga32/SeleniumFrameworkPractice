@@ -5,6 +5,7 @@
     <classes>
       <class name="GuruProject.BankTestClass">
         <methods>
+          <include name="teardown"/>
           <include name="test"/>
           <include name="setup"/>
         </methods>
