@@ -5,27 +5,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverInfo;
+import org.testng.annotations.Test;
 
-public class BankTestClass {
+public class BankTestClass extends BankBaseClass {
 
-	public static void main(String[] args) throws InterruptedException {
-		
-		
-		System.setProperty("webdriver.gecko.driver", "D://geckodriver//geckodriver.exe");
+	@Test
 	
-		WebDriver driver=new FirefoxDriver();
+	public void test() throws InterruptedException
+	{
+		
+		
 		
 		//System.setProperty("webdriver.chrome.driver", "D://ChromeDriver//chromedriver.exe");
 		
 		//WebDriver driver=new ChromeDriver();
 		
-		driver.get("https://demo.guru99.com/v3/index.php");
+		driver.get(URL);
 		driver.manage().window().maximize();
 		
 		BankPageClass test=new BankPageClass(driver);
-		test.userid("mngr573335");
+		test.userid(uid);
 		Thread.sleep(3000);
-		test.password("ymErEmA");
+		test.password(pass);
 		
 		
 		Thread.sleep(3000);
