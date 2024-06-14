@@ -8,28 +8,32 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import Utility.ReadConfig;
+
 public class BankBaseClass {
 	
 	WebDriver driver;
 	Logger logger;
 	
+	ReadConfig readconfig=new ReadConfig();
 	
-	public String URL="https://demo.guru99.com/v3/index.php";
-	public String uid="mngr573335";
-	public String 	pass="ymErEmA";
+	public String URL=readconfig.getapplicationurl();
+	public String uid=readconfig.getuserid();
+	public String pass=readconfig.getpassword();
+	
 	
 	@BeforeTest
 	public void setup()
 	{
 
-		//System.setProperty("webdriver.gecko.driver", "D://geckodriver//geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", readconfig.getfirefox());
 	
-		// driver=new FirefoxDriver();
+		driver=new FirefoxDriver();
 		
 		
-		System.setProperty("webdriver.chrome.driver", "D://ChromeDriver//chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "D://ChromeDriver//chromedriver.exe");
 		
-		 driver=new ChromeDriver();
+		// driver=new ChromeDriver();
 		 
 	 logger=LogManager.getLogger();
 		 
