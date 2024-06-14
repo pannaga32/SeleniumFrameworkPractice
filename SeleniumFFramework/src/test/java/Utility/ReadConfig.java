@@ -56,5 +56,12 @@ public class ReadConfig {
 		String getfirefox=prop.getProperty("firefoxdriver");
 		return getfirefox;
 	}
+	
+
+	public String getchrome()
+	{
+		String getchrome=prop.getProperty("chromepath");
+		return getchrome;
+	}
 }
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="BankTestClass">
+
+  <test name="Test_Banking_1">
+      <parameter name="browser" value="firefox"/>
+      
+      <classes>
+      <class name="GuruProject.BankTestClass"/>
+      </classes>
+  </test> 
+  </suite>
+  
+  
+  

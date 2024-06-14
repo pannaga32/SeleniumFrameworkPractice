@@ -7,51 +7,62 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import Utility.ReadConfig;
 
 public class BankBaseClass {
-	
+
+	private static final String[] String = null;
 	WebDriver driver;
 	Logger logger;
-	
+
 	ReadConfig readconfig=new ReadConfig();
-	
+
 	public String URL=readconfig.getapplicationurl();
 	public String uid=readconfig.getuserid();
 	public String pass=readconfig.getpassword();
-	
-	
+
+
 	@BeforeTest
-	public void setup()
+
+	@Parameters("browser")
+	public void setup(String brws)
 	{
 
-		System.setProperty("webdriver.gecko.driver", readconfig.getfirefox());
-	
-		driver=new FirefoxDriver();
-		
-		
-		//System.setProperty("webdriver.chrome.driver", "D://ChromeDriver//chromedriver.exe");
-		
-		// driver=new ChromeDriver();
-		 
-	 logger=LogManager.getLogger();
-		 
+		if(brws.equals("chrome"))
+		{
+
+			System.setProperty("webdriver.chrome.driver", readconfig.getchrome());
+
+			driver=new ChromeDriver();
+		}
+		else if(brws.equals("firefox"))
+		{
+
+
+			System.setProperty("webdriver.gecko.driver", readconfig.getfirefox());
+
+			driver=new FirefoxDriver();
+		}
+
+		logger=LogManager.getLogger();
+
 	}
-	
-	
+
+
 	@AfterTest
-	
+
 	public void teardown()
 	{
 		driver.close();
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 
 }
